@@ -18,7 +18,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@theme": [
+        "src/theme/index.ts"
+      ],
+      "@styles": [
+        "src/styles/index.ts"
+      ],
+      "@routes": [
+        "src/routes/index.tsx"
+      ],
+      "@components": [
+        "src/components/index.ts"
+      ],
+    }
   },
   "include": [
     "src"
