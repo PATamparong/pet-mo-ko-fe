@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -18,24 +19,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./",
+    "jsx": "preserve",
     "paths": {
-      "@theme": [
-        "src/theme/index.ts"
+      "@root/*": [
+        "./*"
       ],
       "@styles": [
-        "src/styles/index.ts"
-      ],
-      "@routes": [
-        "src/routes/index.tsx"
-      ],
-      "@components": [
-        "src/components/index.ts"
-      ],
+        "/src/styles/*"
+      ]
     }
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
   ]
 }

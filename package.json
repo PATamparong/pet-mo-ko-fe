@@ -14,7 +14,7 @@
     "react-dom": "18.2.0",
     "react-router-dom": "6.8.1",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.8",
     "typescript": "4.9.5",
     "web-vitals": "2.1.4"
   },
@@ -42,17 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "moduleDirectories": [
-      ".",
-      "src",
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "^@theme(.*)$": "<rootDir>/src/theme/$1",
-      "^@styles(.*)$": "<rootDir>/src/styles/$1",
-      "^@routes(.*)$": "<rootDir>/src/routes/$1",
-      "^@components(.*)$": "<rootDir>/src/components/$1"
-    }
+  "devDependencies": {
+    "@types/styled-components": "5.1.26"
   }
 }

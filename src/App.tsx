@@ -1,5 +1,5 @@
 import React from "react";
-import { PublicRoutes } from "src/routes";
+import { PublicRoutes } from "./routes";
 import "./App.css";
 
 function App() {

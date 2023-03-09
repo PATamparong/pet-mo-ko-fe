@@ -1,4 +1,4 @@
-const color = {
+export const color = {
   black1: "#000000",
   black2: "#0d0d0d",
   black3: "#1a1a1a",
@@ -11,7 +11,7 @@ const color = {
   lightYellow: "#ffffe6",
 };
 
-const fontSizes = {
+export const fontSizes = {
   xxsm: 10,
   xsm: 12,
   sm: 14,
@@ -20,5 +20,3 @@ const fontSizes = {
   xlg: 21,
   xs: 24,
 };
-
-export { color, fontSizes };
