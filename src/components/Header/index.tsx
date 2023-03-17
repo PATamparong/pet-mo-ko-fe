@@ -23,7 +23,7 @@ export default function Header(props: Props) {
 
       <nav>
         <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-          Click me
+          Hello
         </button>
         <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
           Click me
