@@ -14,15 +14,16 @@
     "react-dom": "18.2.0",
     "react-router-dom": "6.8.1",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.8",
     "typescript": "4.9.5",
     "web-vitals": "2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run watch:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/assets/styles/tailwind.css -o src/assets/styles/main.css"
   },
   "eslintConfig": {
     "extends": [
@@ -42,17 +43,10 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "moduleDirectories": [
-      ".",
-      "src",
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "^@theme(.*)$": "<rootDir>/src/theme/$1",
-      "^@styles(.*)$": "<rootDir>/src/styles/$1",
-      "^@routes(.*)$": "<rootDir>/src/routes/$1",
-      "^@components(.*)$": "<rootDir>/src/components/$1"
-    }
+  "devDependencies": {
+    "@types/styled-components": "5.1.26",
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.7"
   }
 }
