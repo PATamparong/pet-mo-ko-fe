@@ -1,5 +1,16 @@
 import React from "react";
+import "../../assets/styles/container.css";
 
-export default function Container() {
-  return <>Container</>;
+type Props = {
+  children: any;
+};
+
+export default function Container(props: Props) {
+  const { children } = props;
+
+  return (
+    <div className="container max-w-sm rounded overflow-hidden shadow-lg">
+      {children}
+    </div>
+  );
 }
