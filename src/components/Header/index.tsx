@@ -1,9 +1,10 @@
 import React from "react";
 import "../../assets/styles/header.css";
+import FriendIcon from "../../assets/icons/friends.svg";
 
 type Props = {
   placeholder?: string;
-  children: any;
+  children?: any;
 };
 
 export default function Header(props: Props) {
@@ -13,22 +14,22 @@ export default function Header(props: Props) {
     <header className="flex items-center justify-between px-4 py-2 bg-blue-100">
       <div className="flex items-center">
         <img
-          src="https://cdn.hashnode.com/res/hashnode/image/upload/v1643004937711/k3NMskkSn.png"
+          src={FriendIcon}
           width="50"
           alt="Daily Dev Tips Logo"
-          className="mr-2"
+          className="mr-1"
         />
         <strong className="px-4">{children}</strong>
       </div>
 
-      <nav>
-        <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+      <nav className="flex">
+        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
           Hello
         </button>
-        <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
           Click me
         </button>
-        <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
           Click me
         </button>
       </nav>

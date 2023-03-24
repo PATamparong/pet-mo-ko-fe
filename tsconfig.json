@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -19,20 +18,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "paths": {
-      "@root/*": [
-        "./*"
-      ],
-      "@styles": [
-        "/src/styles/*"
-      ]
-    }
+    "jsx": "preserve"
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }

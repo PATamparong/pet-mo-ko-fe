@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.container {
+  /* display: flex; */
+  background-color: antiquewhite;
+  /* width: max-content;
+  min-height: fit-content; */
+  padding: 2%;
+}
