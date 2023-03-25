@@ -8,7 +8,8 @@
   width: 100%;
   margin: 0px 0px 0px 0px;
   border: none;
-  bottom: 0px;
-  position: absolute;
-  justify-content: flex-end;
+  bottom: 0;
+  left: 0;
+  /* position: absolute; */
+  /* justify-content: flex-end; */
 }

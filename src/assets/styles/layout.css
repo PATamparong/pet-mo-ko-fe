@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 .content {
-  max-height: 400px;
-  overflow-y: scroll;
+  /* max-height: 400px; */
+  /* overflow-y: scroll; */
 }

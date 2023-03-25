@@ -5,5 +5,6 @@
 @tailwind utilities;
 
 .flex {
-  color: green;
+  color: grey;
+  z-index: 100;
 }
