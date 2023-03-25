@@ -5,9 +5,8 @@
 @tailwind utilities;
 
 .container {
-  /* display: flex; */
-  background-color: antiquewhite;
-  /* width: max-content;
-  min-height: fit-content; */
+  background-color: rgb(242, 241, 239);
+  width: max-content;
+  min-height: fit-content;
   padding: 2%;
 }
