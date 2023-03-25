@@ -1,17 +1,27 @@
-import { Input, Layout, Button, Container } from "../../components";
+import {
+  Input,
+  Layout,
+  Button,
+  Container,
+  TextArea,
+  Label,
+} from "../../components";
 import React from "react";
 import { Center, Space } from "../../styles";
 
 export default function Animals() {
   return (
-    <Layout>
+    <Layout headerName="Animals">
       <Center VH>
         <Container>
-          <Center VH>
-            <Input placeholder="please input animal name" />
-          </Center>
+          <Input placeholder="Name" />
           <Space T={10} />
-          <Center VH>
+          <Input placeholder="Age" />
+          <Space T={5} />
+          <Label name="Description:" important={true} />
+          <TextArea />
+          <Space T={10} />
+          <Center STRETCH>
             <Button name="Add Animal" color="white" />
           </Center>
         </Container>

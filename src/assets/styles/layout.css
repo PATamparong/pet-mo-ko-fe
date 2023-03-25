@@ -1,0 +1,10 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.content {
+  max-height: 400px;
+  overflow-y: scroll;
+}

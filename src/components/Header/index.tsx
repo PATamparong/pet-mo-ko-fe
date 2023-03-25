@@ -24,13 +24,13 @@ export default function Header(props: Props) {
 
       <nav className="flex">
         <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
-          Hello
+          Add
         </button>
         <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
-          Click me
+          Details
         </button>
         <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
-          Click me
+          Service
         </button>
       </nav>
     </header>

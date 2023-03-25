@@ -9,7 +9,7 @@ export default function Container(props: Props) {
   const { children } = props;
 
   return (
-    <div className="container max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="container max-w-sm rounded shadow-lg md:mx-auto">
       {children}
     </div>
   );

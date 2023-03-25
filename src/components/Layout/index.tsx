@@ -1,25 +1,28 @@
 import React from "react";
-import "../../assets/styles/header.css";
+import "../../assets/styles/layout.css";
 import Footer from "../Footer";
 import Header from "../Header";
-import { Center, Space } from "../../styles";
+import { Space } from "../../styles";
 
 type Props = {
   placeholder?: string;
   children: any;
+  headerName?: string;
 };
 
 export default function Layout(props: Props) {
-  const { children } = props;
+  const { children, headerName } = props;
 
   return (
     <div>
       <Header>
-        <h4>Animals</h4>
+        <h4>{headerName}</h4>
       </Header>
-      <Space T={3} />
-      {children}
-      <Space T={3} />
+      <div className="content">
+        <Space T={5} />
+        {children}
+        <Space T={5} />
+      </div>
       <Footer />
     </div>
   );
