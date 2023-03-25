@@ -14,7 +14,7 @@ export default function Layout(props: Props) {
   const { children, headerName } = props;
 
   return (
-    <div>
+    <div className="layout">
       <Header>
         <h4>{headerName}</h4>
       </Header>

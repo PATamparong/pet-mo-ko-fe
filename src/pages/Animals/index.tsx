@@ -11,7 +11,7 @@ import { Center, Space } from "../../styles";
 
 export default function Animals() {
   return (
-    <Layout headerName="Animals">
+    <Layout headerName="Pet Mo Ko">
       <Center VH>
         <Container>
           <Input placeholder="Name" />
