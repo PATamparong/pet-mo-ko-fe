@@ -11,7 +11,7 @@ export default function Header(props: Props) {
   const { children } = props;
 
   return (
-    <header className="flex items-center justify-between px-4 py-2 bg-blue-100">
+    <header className="flex items-center justify-between px-4 py-2 bg-blue-100 sticky top-0">
       <div className="flex items-center">
         <img
           src={FriendIcon}
@@ -23,13 +23,13 @@ export default function Header(props: Props) {
       </div>
 
       <nav className="flex">
-        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
+        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
           Add
         </button>
-        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
+        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
           Details
         </button>
-        <button className="mr-2 text-sm lg:flex-grow text-white rounded text-blue-700 hover:text-blue-800">
+        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
           Service
         </button>
       </nav>
