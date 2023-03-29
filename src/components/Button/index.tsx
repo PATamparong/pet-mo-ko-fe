@@ -5,10 +5,11 @@ type Props = {
   type?: "button" | "submit" | "reset" | undefined;
   color?: string;
   width?: string | number;
+  onClick?: () => void;
 };
 
 export default function Button(props: Props) {
-  const { name, type, color, width } = props;
+  const { name, type, color, width, onClick, ...res } = props;
 
   return (
     <button
@@ -18,6 +19,8 @@ export default function Button(props: Props) {
         width ?? "full"
       }`}
       type={type}
+      onClick={onClick}
+      {...res}
     >
       {name}
     </button>

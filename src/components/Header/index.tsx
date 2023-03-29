@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/styles/header.css";
 import FriendIcon from "../../assets/icons/friends.svg";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   placeholder?: string;
@@ -9,6 +10,7 @@ type Props = {
 
 export default function Header(props: Props) {
   const { children } = props;
+  const navigate = useNavigate();
 
   return (
     <header className="flex items-center justify-between px-4 py-2 bg-blue-100 sticky top-0">
@@ -23,13 +25,22 @@ export default function Header(props: Props) {
       </div>
 
       <nav className="flex">
-        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
+        <button
+          className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
+          onClick={() => navigate("/animals")}
+        >
           Add
         </button>
-        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
+        <button
+          className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
+          onClick={() => navigate("/details")}
+        >
           Details
         </button>
-        <button className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800">
+        <button
+          className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
+          onClick={() => navigate("/services")}
+        >
           Service
         </button>
       </nav>

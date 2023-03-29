@@ -15,10 +15,10 @@ export default function Layout(props: Props) {
 
   return (
     <div className="layout">
-      <Header>
-        <h4>{headerName}</h4>
-      </Header>
       <div className="content">
+        <Header>
+          <h4>{headerName}</h4>
+        </Header>
         <Space T={5} />
         {children}
         <Space T={5} />
