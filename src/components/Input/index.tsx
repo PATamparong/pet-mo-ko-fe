@@ -1,12 +1,14 @@
-import React from "react";
+import React, { ChangeEventHandler } from "react";
 
 type Props = {
   placeholder?: string | undefined;
   type?: string;
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 export default function Input(props: Props) {
-  const { placeholder, type } = props;
+  const { placeholder, type, value, onChange } = props;
 
   return (
     <div>
@@ -18,6 +20,8 @@ export default function Input(props: Props) {
                   focus:border-indigo-500 focus:z-10 sm:text-sm border-2 border-sky-500"
         placeholder={placeholder}
         type={type}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );

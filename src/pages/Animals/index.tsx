@@ -8,10 +8,13 @@ import {
 } from "../../components";
 import React from "react";
 import { Center, Space } from "../../styles";
+import { useLocation } from "react-router-dom";
 
 export default function Animals() {
+  const { state } = useLocation();
+
   return (
-    <Layout headerName="Pet Mo Ko">
+    <Layout headerName="Pet Mo Ko" user={state.name}>
       <Center VH>
         <Container>
           <Input placeholder="Name" />

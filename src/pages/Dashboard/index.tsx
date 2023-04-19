@@ -1,31 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { Center, Space } from "../../styles";
 import Welcome from "../../assets/icons/welcome.svg";
-import { Button } from "../../components";
+import { Button, Container, Input } from "../../components";
 import { useNavigate } from "react-router-dom";
+import SplitPane from "../../components/SplitPane";
+import { alignment, justifyContent } from "../../themes";
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const [guestName, setGuestName] = useState<string>("");
+
+  const handleNavigate = () => {
+    if (guestName) {
+      navigate("/animals", { state: { name: guestName } });
+    }
+  };
 
   return (
     <div>
-      <Center VH>
-        <img
-          src={Welcome}
-          width="50"
-          alt="Daily Dev Tips Logo"
-          className="mr-1"
-          style={{ width: "50%", marginTop: "40%", position: "absolute" }}
-        />
-        <Space T={10} />
-        <Center>
-          <Button
-            name="GET STARTED"
-            color="white"
-            onClick={() => navigate("/animals")}
-          />
-        </Center>
-      </Center>
+      <SplitPane
+        left={
+          <Center VH>
+            <img
+              src={Welcome}
+              width="50"
+              alt="Logo"
+              className="mr-1"
+              style={{
+                height: "100vh",
+                width: "100%",
+                backgroundColor: "grey",
+              }}
+            />
+          </Center>
+        }
+        right={
+          <Container
+            alignItem={alignment.center}
+            justifyContent={justifyContent.center}
+            marginTop={15}
+            withMargin={true}
+          >
+            <Input
+              placeholder="Guest Name"
+              value={guestName}
+              onChange={(e) => setGuestName(e.target.value)}
+            />
+            <Space T={5} />
+            <Button name="GET STARTED" color="white" onClick={handleNavigate} />
+          </Container>
+        }
+      />
     </div>
   );
 }
