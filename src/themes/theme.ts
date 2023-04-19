@@ -20,3 +20,9 @@ export const fontSizes = {
   xlg: 21,
   xs: 24,
 };
+
+export const alignment = {
+  center: "center",
+};
+
+export const justifyContent = { center: "center" };
