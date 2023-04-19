@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="dark-theme"
-      className="bottom-0 left-0 flex flex-col w-full gap-8 px-8 py-16 md:gap-12 bg-gray-900"
+      className="footer bottom-0 left-0 flex flex-col w-full gap-8 px-8 py-16 md:gap-12 bg-gray-900"
     >
       <div className="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
       <div className="flex flex-col items-center gap-8 md:justify-between md:flex-row">
@@ -21,7 +21,7 @@ export default function Footer() {
             placeholder="Enter your email"
             type="text"
           />
-          <button className="px-6 py-4 font-semibold bg-purple-500 rounded-lg">
+          <button className="bg-gray-500/75 hover:bg-blue-300/75 px-6 py-4 font-semibold  text-white rounded-lg">
             Subscribe
           </button>
         </div>

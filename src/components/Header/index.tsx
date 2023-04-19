@@ -6,21 +6,17 @@ import { useNavigate } from "react-router-dom";
 type Props = {
   placeholder?: string;
   children?: any;
+  user?: string;
 };
 
 export default function Header(props: Props) {
-  const { children } = props;
+  const { children, user } = props;
   const navigate = useNavigate();
 
   return (
     <header className="flex items-center justify-between px-4 py-2 bg-blue-100 sticky top-0">
       <div className="flex items-center">
-        <img
-          src={FriendIcon}
-          width="50"
-          alt="Daily Dev Tips Logo"
-          className="mr-1"
-        />
+        <img src={FriendIcon} width="50" alt="Logo" className="mr-1" />
         <strong className="px-4">{children}</strong>
       </div>
 
@@ -43,6 +39,7 @@ export default function Header(props: Props) {
         >
           Service
         </button>
+        {user ?? <h3 className="user text-red">{user}</h3>}
       </nav>
     </header>
   );
