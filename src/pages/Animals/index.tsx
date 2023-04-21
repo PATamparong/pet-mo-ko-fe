@@ -14,7 +14,7 @@ import { useAnimalContext } from "../../providers";
 export default function Animals() {
   const { animals, setAnimals } = useAnimalContext();
   const [name, setName] = useState<string>("");
-  const [age, setAge] = useState<number | null>(null);
+  const [age, setAge] = useState<number>(0);
   const [description, setDescription] = useState<string>("");
   console.log({ name, age, description }, animals);
 
@@ -22,7 +22,7 @@ export default function Animals() {
     if (name && age && description) {
       setAnimals({ name, age, description });
       setName("");
-      setAge(null);
+      setAge(0);
       setDescription("");
     }
   };
