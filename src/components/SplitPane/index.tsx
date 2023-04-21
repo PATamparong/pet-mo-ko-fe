@@ -11,7 +11,10 @@ export default function SplitPane(props: Props) {
   const { right, left } = props;
 
   return (
-    <S.Wrapper>
+    <S.Wrapper
+      windowHeight={window.outerHeight}
+      windowWidth={window.innerWidth}
+    >
       <S.LeftPane>{left}</S.LeftPane>
       <S.RightPane
         alignItem={alignment.center}
