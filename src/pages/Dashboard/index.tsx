@@ -12,7 +12,7 @@ export default function Dashboard() {
 
   const handleNavigate = () => {
     if (guestName) {
-      navigate("/animals", { state: { name: guestName } });
+      navigate("/animals");
     }
   };
 
@@ -38,8 +38,8 @@ export default function Dashboard() {
           <Container
             alignItem={alignment.center}
             justifyContent={justifyContent.center}
-            marginTop={15}
-            withMargin={true}
+            marginTop={30}
+            marginLeft={25}
           >
             <Input
               placeholder="Guest Name"

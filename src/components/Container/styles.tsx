@@ -4,13 +4,16 @@ type Props = {
   alignItem?: string;
   justifyContent?: string;
   marginTop?: number;
-  withMargin?: boolean;
+  marginRight?: number;
+  marginLeft?: number;
+  marginBottom?: number;
 };
 
 export const Container = styled.div<Props>`
   align-items: ${(props) => props.alignItem};
   justify-content: ${(props) => props.justifyContent};
-
-  ${(props) =>
-    props.withMargin && `margin: ${(props: any) => props.marginTop}% 0% 0px;`}
+  margin: ${(props: any) => props.marginTop ?? 0}%
+    ${(props: any) => props.marginRight ?? 0}%
+    ${(props: any) => props.marginBottom ?? 0}%
+    ${(props: any) => props.marginLeft ?? 0}%;
 `;

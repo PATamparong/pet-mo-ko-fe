@@ -2,9 +2,9 @@ import React, { ChangeEventHandler } from "react";
 
 type Props = {
   placeholder?: string | undefined;
-  type?: string;
-  value?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  type?: string | undefined;
+  value: string | number | undefined;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 };
 
 export default function Input(props: Props) {

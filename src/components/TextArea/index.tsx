@@ -1,6 +1,13 @@
-import React from "react";
+import React, { ChangeEventHandler } from "react";
 
-export default function TextArea() {
+type Props = {
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
+};
+
+export default function TextArea(props: Props) {
+  const { value, onChange } = props;
+
   return (
     <div>
       <textarea
@@ -9,6 +16,8 @@ export default function TextArea() {
                   placeholder-gray-500 text-gray-900
                   focus:outline-none focus:ring-indigo-500
                   focus:border-indigo-500 focus:z-10 sm:text-sm border-2 border-sky-500"
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
