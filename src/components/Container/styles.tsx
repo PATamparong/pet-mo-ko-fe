@@ -16,4 +16,8 @@ export const Container = styled.div<Props>`
     ${(props: any) => props.marginRight ?? 0}%
     ${(props: any) => props.marginBottom ?? 0}%
     ${(props: any) => props.marginLeft ?? 0}%;
+
+  @media (max-width: 600px) {
+    margin: 50px 0px 50px 0px;
+  }
 `;
