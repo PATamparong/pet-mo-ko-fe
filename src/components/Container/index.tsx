@@ -7,7 +7,9 @@ type Props = {
   alignItem?: string;
   justifyContent?: string;
   marginTop?: number;
-  withMargin?: boolean;
+  marginLeft?: number;
+  marginRight?: number;
+  marginBottom?: number;
 };
 
 export default function Container(props: Props) {
@@ -16,7 +18,9 @@ export default function Container(props: Props) {
     alignItem,
     justifyContent,
     marginTop,
-    withMargin = false,
+    marginLeft,
+    marginRight,
+    marginBottom,
   } = props;
 
   return (
@@ -25,7 +29,9 @@ export default function Container(props: Props) {
       alignItem={alignItem}
       justifyContent={justifyContent}
       marginTop={marginTop}
-      withMargin={withMargin}
+      marginRight={marginRight}
+      marginLeft={marginLeft}
+      marginBottom={marginBottom}
     >
       {children}
     </S.Container>
