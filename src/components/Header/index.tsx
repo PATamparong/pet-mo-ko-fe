@@ -25,7 +25,7 @@ export default function Header(props: Props) {
           className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
           onClick={() => navigate("/animals")}
         >
-          Add
+          Animals
         </button>
         <button
           className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
