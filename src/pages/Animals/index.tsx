@@ -16,15 +16,15 @@ export default function Animals() {
   const [name, setName] = useState<string>("");
   const [age, setAge] = useState<number>(0);
   const [description, setDescription] = useState<string>("");
-  console.log({ name, age, description }, animals);
 
   const handleAddAnimal = () => {
-    if (name && age && description) {
-      setAnimals({ name, age, description });
-      setName("");
-      setAge(0);
-      setDescription("");
-    }
+    if (!name) return;
+    if (!age && age <= 0) return;
+
+    setAnimals({ name, age, description });
+    setName("");
+    setAge(0);
+    setDescription("");
   };
 
   return (
@@ -44,8 +44,8 @@ export default function Animals() {
             onChange={(e) => setAge(e.target.valueAsNumber)}
           />
           <Space T={5} />
-          <Label name="Description:" important={true} />
           <TextArea
+            label="Description:"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />

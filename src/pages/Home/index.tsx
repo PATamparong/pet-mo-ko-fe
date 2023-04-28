@@ -5,8 +5,9 @@ import { Button, Container, Input } from "../../components";
 import { useNavigate } from "react-router-dom";
 import SplitPane from "../../components/SplitPane";
 import { alignment, justifyContent } from "../../themes";
+import { useAppContext } from "../../providers";
 
-export default function Dashboard() {
+export default function Home() {
   const navigate = useNavigate();
   const [guestName, setGuestName] = useState<string>("");
 

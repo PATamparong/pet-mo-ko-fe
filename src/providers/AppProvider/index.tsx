@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import { createContextProvider } from "../../types/Context";
 
 type Props = { children: ReactNode };
@@ -6,8 +6,10 @@ type Props = { children: ReactNode };
 const [useAppContext, AppContextProvider] = createContextProvider();
 
 function AppProvider(props: Props) {
+  const [guestName, setGuestName] = useState<string>("");
+
   const getValues = () => {
-    return {};
+    return { guestName, setGuestName };
   };
 
   return (

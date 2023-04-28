@@ -1,4 +1,5 @@
 import React from "react";
+import * as S from "./styles";
 
 type Props = {
   name: string;
@@ -10,9 +11,9 @@ export default function Label(props: Props) {
 
   return (
     <div className="relative h-7 w-7">
-      <p className="absolute left-0 top-0 h-10 w-10 text-red">
+      <S.Text className="absolute left-0 top-0 h-10 w-10">
         {name} {important ? "*" : false}
-      </p>
+      </S.Text>
     </div>
   );
 }
