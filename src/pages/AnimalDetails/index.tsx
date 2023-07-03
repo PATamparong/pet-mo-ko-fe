@@ -2,10 +2,10 @@ import { Layout } from "../../components";
 import React from "react";
 import { Center } from "../../styles";
 
-export default function AppServices() {
+export default function AnimalDetails() {
   return (
     <Layout headerName="Pet Mo Ko">
-      <Center VH>services</Center>
+      <Center VH>Details</Center>
     </Layout>
   );
 }

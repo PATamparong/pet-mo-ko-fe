@@ -16,7 +16,6 @@ export default function Animals() {
   const [name, setName] = useState<string>("");
   const [age, setAge] = useState<number>(0);
   const [description, setDescription] = useState<string>("");
-  console.log({ name, age, description }, animals);
 
   const handleAddAnimal = () => {
     if (name && age && description) {

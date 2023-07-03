@@ -3,7 +3,6 @@ import "../../assets/styles/layout.css";
 import Footer from "../Footer";
 import Header from "../Header";
 import { Space } from "../../styles";
-import { useNavigate } from "react-router-dom";
 
 type Props = {
   placeholder?: string;
@@ -13,7 +12,6 @@ type Props = {
 };
 
 export default function Layout(props: Props) {
-  const navigate = useNavigate();
   const { children, headerName, user } = props;
 
   return (

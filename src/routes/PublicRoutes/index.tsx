@@ -2,16 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Animals from "../../pages/Animals";
 import Dashboard from "../../pages/Dashboard";
-import AppServices from "../../pages/AppServices";
-import Details from "../../pages/Details";
+import Services from "../../pages/AnimalServices";
+import Details from "../../pages/AnimalDetails";
+import Login from "../../pages/Login";
 
 export default function PublicRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/animals" element={<Animals />} />
-        <Route path="/services" element={<AppServices />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/details" element={<Details />} />
       </Routes>
     </Router>

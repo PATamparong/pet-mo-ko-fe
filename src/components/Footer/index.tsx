@@ -28,7 +28,7 @@ export default function Footer() {
       </div>
       <div className="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
       <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between ">
-        <div>&#169; 2022</div>
+        <div>&#169; 2023</div>
         <div className="flex gap-4 p-2 rounded-md social-wrapper">
           <img
             className="text-white"
