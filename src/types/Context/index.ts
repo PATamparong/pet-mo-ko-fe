@@ -7,7 +7,7 @@ export function createContextProvider<T>() {
     const context = useContext(contextProvider);
 
     if (!context) {
-      throw new Error("context error chuchu");
+      throw new Error("context error...");
     }
 
     return context;

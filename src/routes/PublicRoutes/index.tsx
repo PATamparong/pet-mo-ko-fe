@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Animals from "../../pages/Animals";
 import Dashboard from "../../pages/Dashboard";
-import Services from "../../pages/AnimalServices";
+import Services from "../../pages/Services";
 import Details from "../../pages/AnimalDetails";
 import Login from "../../pages/Login";
 

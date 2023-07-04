@@ -3,7 +3,7 @@ import React, { ChangeEventHandler } from "react";
 type Props = {
   placeholder?: string | undefined;
   type?: string | undefined;
-  value: string | number | undefined;
+  value?: string | number | undefined;
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
 

@@ -29,12 +29,6 @@ export default function Header(props: Props) {
         </button>
         <button
           className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
-          onClick={() => navigate("/details")}
-        >
-          Details
-        </button>
-        <button
-          className="mr-2 text-sm lg:flex-grow text-gray rounded  hover:text-blue-800"
           onClick={() => navigate("/services")}
         >
           Service

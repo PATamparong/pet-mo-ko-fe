@@ -1,16 +1,19 @@
 import React from "react";
 import { Animals } from "../../../../types";
 
-type Props = { animals: Animals };
+type Props = { animals: Array<Animals> };
 
 export default function AnimalList(props: Props) {
-  const { name, age, description } = props.animals || {};
+  const { animals } = props || {};
 
   return (
     <>
-      <p>{name}</p>
-      <p>{age}</p>
-      {description}
+      {animals?.map(({ name }, index) => (
+        <p key={index}>
+          {"\u2022"} {name}
+        </p>
+      ))}
+      {console.log(animals, "precious")}
     </>
   );
 }

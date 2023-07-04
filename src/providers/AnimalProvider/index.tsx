@@ -6,7 +6,9 @@ type Props = { children: ReactNode };
 
 type AnimalTypes = {
   animals: Animals;
+  animalData: Array<Animals>;
   setAnimals: Dispatch<Animals>;
+  setAnimalData: Dispatch<Array<Animals>>;
 };
 
 const [useAnimalContext, AnimalContextProvider] =
@@ -14,9 +16,10 @@ const [useAnimalContext, AnimalContextProvider] =
 
 function AnimalProvider(props: Props) {
   const [animals, setAnimals] = useState<Animals>({});
+  const [animalData, setAnimalData] = useState<Array<Animals>>([]);
 
   const getValues = (): AnimalTypes => {
-    return { animals, setAnimals };
+    return { animals, animalData, setAnimals, setAnimalData };
   };
 
   return (
